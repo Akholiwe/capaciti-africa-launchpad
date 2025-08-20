@@ -18,21 +18,21 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 27%;
 
-    /* Primary - Deep Ocean Blue (Trust, Technology) */
-    --primary: 200 70% 20%;
+    /* Primary - CAPACITI Coral/Salmon */
+    --primary: 0 78% 70%;
     --primary-foreground: 0 0% 98%;
-    --primary-light: 200 60% 35%;
-    --primary-glow: 200 100% 85%;
+    --primary-light: 0 78% 80%;
+    --primary-glow: 0 78% 90%;
 
-    /* Secondary - Sunset Orange (African warmth, Energy) */
-    --secondary: 25 95% 65%;
-    --secondary-foreground: 215 25% 27%;
-    --secondary-light: 25 100% 75%;
+    /* Secondary - Deep Navy (Professional, Trustworthy) */
+    --secondary: 220 30% 25%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-light: 220 25% 35%;
 
-    /* Accent - Emerald Growth (Success, Nature) */
-    --accent: 150 75% 45%;
-    --accent-foreground: 0 0% 98%;
-    --accent-light: 150 60% 60%;
+    /* Accent - Light Gray/White */
+    --accent: 0 0% 95%;
+    --accent-foreground: 220 30% 25%;
+    --accent-light: 0 0% 98%;
 
     /* Neutral Palette */
     --muted: 210 40% 96%;
@@ -49,8 +49,8 @@
 
     /* Custom Design Tokens */
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--accent)));
     
     --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.15);
     --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);

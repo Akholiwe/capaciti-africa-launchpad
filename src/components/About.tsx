@@ -33,61 +33,57 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="about" className="py-16 lg:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <Badge variant="secondary" className="mb-4 text-sm font-medium px-4 py-2">
-              Our Story
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              15 Years of Impact
+            <h2 className="text-3xl lg:text-4xl font-bold text-secondary mb-8">
+              About Capaciti
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Established in 2010, CAPACITI is a leading non-profit digital talent accelerator 
-              in South Africa delivering demand-driven technical training to unemployed youth.
+            <p className="text-lg text-secondary/80 leading-relaxed max-w-3xl mx-auto">
+              Established in 2010, CAPACITI, part of the UVU Africa Group, is at the forefront of 
+              preparing young individuals for the tech sector. CAPACITI has emerged as one of South 
+              Africa's leading digital talent accelerators, annually training and placing approximately 
+              1000 unemployed youth. As a non-profit organisation, CAPACITI leverages partner investments to 
+              deliver demand-driven, targeted technical training that positively impacts lives.
             </p>
           </div>
 
           {/* Mission, Vision, Ethos */}
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             {values.map((value, index) => (
-              <Card key={index} className="p-8 text-center shadow-card border-0 bg-card hover:shadow-elegant transition-smooth">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6 text-primary">
-                  {value.icon}
+              <div key={index} className="text-center p-6">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="text-primary">{value.icon}</div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-foreground">{value.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{value.description}</p>
-              </Card>
+                <h3 className="text-xl font-semibold text-secondary mb-3">{value.title}</h3>
+                <p className="text-secondary/70 leading-relaxed">{value.description}</p>
+              </div>
             ))}
           </div>
 
           {/* Timeline */}
           <div>
-            <h3 className="text-3xl font-bold text-center mb-12 text-foreground">Our Journey</h3>
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 transform md:-translate-x-1/2"></div>
-              
-              <div className="space-y-8">
+            <h3 className="text-3xl font-bold text-center mb-12 text-primary">Over 10+ Years of Innovation</h3>
+            
+            {/* Simple horizontal timeline */}
+            <div className="relative overflow-x-auto">
+              <div className="flex items-center justify-between min-w-full pb-8">
+                {/* Timeline line */}
+                <div className="absolute top-8 left-0 right-0 h-0.5 bg-primary/20"></div>
+                
                 {milestones.map((milestone, index) => (
-                  <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col md:flex-row`}>
-                    {/* Timeline Dot */}
-                    <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-primary rounded-full transform md:-translate-x-1/2 z-10 border-4 border-background"></div>
+                  <div key={index} className="flex flex-col items-center text-center min-w-[120px] relative">
+                    {/* Year dot */}
+                    <div className="w-4 h-4 bg-primary rounded-full mb-4 z-10 border-4 border-white"></div>
                     
-                    {/* Content */}
-                    <div className={`ml-12 md:ml-0 ${index % 2 === 0 ? 'md:mr-8 md:text-right' : 'md:ml-8'} md:w-1/2`}>
-                      <Card className="p-6 shadow-card border-0 bg-card">
-                        <div className="flex items-center gap-3 mb-3">
-                          <Badge variant="outline" className="text-primary border-primary/30">
-                            {milestone.year}
-                          </Badge>
-                        </div>
-                        <p className="text-foreground font-medium leading-relaxed">
-                          {milestone.event}
-                        </p>
-                      </Card>
+                    {/* Year */}
+                    <div className="text-lg font-bold text-primary mb-2">{milestone.year}</div>
+                    
+                    {/* Event */}
+                    <div className="text-sm text-secondary/70 max-w-[140px] leading-tight">
+                      {milestone.event}
                     </div>
                   </div>
                 ))}
