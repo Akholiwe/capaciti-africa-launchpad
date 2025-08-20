@@ -18,11 +18,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 25% 27%;
 
-    /* Primary - CAPACITI Coral/Salmon */
-    --primary: 0 78% 70%;
+    /* Primary - CAPACITI Blue */
+    --primary: 210 100% 60%;
     --primary-foreground: 0 0% 98%;
-    --primary-light: 0 78% 80%;
-    --primary-glow: 0 78% 90%;
+    --primary-light: 210 100% 70%;
+    --primary-glow: 210 100% 85%;
 
     /* Secondary - Deep Navy (Professional, Trustworthy) */
     --secondary: 220 30% 25%;
