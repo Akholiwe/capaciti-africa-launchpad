@@ -16,18 +16,38 @@ const Footer = () => {
                 and workplace readiness across Africa.
               </p>
               <div className="flex gap-4">
-                <button className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth">
+                <a
+                  href="https://www.facebook.com/uvuafrica"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth"
+                >
                   <Facebook size={18} />
-                </button>
-                <button className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth">
+                </a>
+                <a
+                  href="https://x.com/UVUAfrica/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth"
+                >
                   <Twitter size={18} />
-                </button>
-                <button className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth">
+                </a>
+                <a
+                  href="https://www.instagram.com/uvuafrica/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth"
+                >
                   <Instagram size={18} />
-                </button>
-                <button className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth">
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/capacitiza/posts/?feedView=all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth"
+                >
                   <Linkedin size={18} />
-                </button>
+                </a>
               </div>
             </div>
 
