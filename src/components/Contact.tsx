@@ -1,9 +1,16 @@
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 
 const Contact = () => {
@@ -121,65 +128,85 @@ const Contact = () => {
                 </div>
               </Card>
 
-             {/* Social Media */}
-<Card className="p-8 shadow-card border-0 bg-card">
-  <h3 className="text-2xl font-bold text-foreground mb-6">Follow Us</h3>
-  <div className="flex gap-4">
-    <a
-      href="https://www.facebook.com/uvuafrica"
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={(e) => {
-        console.log('Facebook link clicked', e);
-        window.open('https://www.facebook.com/uvuafrica', '_blank');
-      }}
-      className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
-                 rounded-lg flex items-center justify-center text-primary transition-smooth"
-    >
-      <Facebook size={20} />
-    </a>
-    <a
-      href="https://x.com/UVUAfrica/"
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={(e) => {
-        console.log('Twitter link clicked', e);
-        window.open('https://x.com/UVUAfrica/', '_blank');
-      }}
-      className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
-                 rounded-lg flex items-center justify-center text-primary transition-smooth"
-    >
-      <Twitter size={20} />
-    </a>
-    <a
-      href="https://www.instagram.com/uvuafrica/"
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={(e) => {
-        console.log('Instagram link clicked', e);
-        window.open('https://www.instagram.com/uvuafrica/', '_blank');
-      }}
-      className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
-                 rounded-lg flex items-center justify-center text-primary transition-smooth"
-    >
-      <Instagram size={20} />
-    </a>
-    <a
-      href="https://www.linkedin.com/company/capacitiza/posts/?feedView=all"
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={(e) => {
-        console.log('LinkedIn link clicked', e);
-        window.open('https://www.linkedin.com/company/capacitiza/posts/?feedView=all', '_blank');
-      }}
-      className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
-                 rounded-lg flex items-center justify-center text-primary transition-smooth"
-    >
-      <Linkedin size={20} />
-    </a>
-  </div>
-</Card>
+              {/* Social Media */}
+              <Card className="p-8 shadow-card border-0 bg-card">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Follow Us</h3>
+                <TooltipProvider>
+                  <div className="flex gap-4">
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <a
+                          href="https://www.facebook.com/uvuafrica"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Facebook"
+                          className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
+                                     rounded-lg flex items-center justify-center text-primary transition-smooth"
+                        >
+                          <Facebook size={20} />
+                        </a>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Facebook</p>
+                      </TooltipContent>
+                    </Tooltip>
 
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <a
+                          href="https://x.com/UVUAfrica/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Twitter"
+                          className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
+                                     rounded-lg flex items-center justify-center text-primary transition-smooth"
+                        >
+                          <Twitter size={20} />
+                        </a>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>X (Twitter)</p>
+                      </TooltipContent>
+                    </Tooltip>
+
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <a
+                          href="https://www.instagram.com/uvuafrica/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Instagram"
+                          className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
+                                     rounded-lg flex items-center justify-center text-primary transition-smooth"
+                        >
+                          <Instagram size={20} />
+                        </a>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Instagram</p>
+                      </TooltipContent>
+                    </Tooltip>
+
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <a
+                          href="https://www.linkedin.com/company/capacitiza/posts/?feedView=all"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="LinkedIn"
+                          className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
+                                     rounded-lg flex items-center justify-center text-primary transition-smooth"
+                        >
+                          <Linkedin size={20} />
+                        </a>
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>LinkedIn</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </div>
+                </TooltipProvider>
+              </Card>
 
               {/* Newsletter */}
               <Card className="p-8 shadow-card border-0 bg-card">
