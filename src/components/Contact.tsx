@@ -121,24 +121,49 @@ const Contact = () => {
                 </div>
               </Card>
 
-              {/* Social Media */}
-              <Card className="p-8 shadow-card border-0 bg-card">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Follow Us</h3>
-                <div className="flex gap-4">
-                  <button className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground rounded-lg flex items-center justify-center text-primary transition-smooth">
-                    <Facebook size={20} />
-                  </button>
-                  <button className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground rounded-lg flex items-center justify-center text-primary transition-smooth">
-                    <Twitter size={20} />
-                  </button>
-                  <button className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground rounded-lg flex items-center justify-center text-primary transition-smooth">
-                    <Instagram size={20} />
-                  </button>
-                  <button className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground rounded-lg flex items-center justify-center text-primary transition-smooth">
-                    <Linkedin size={20} />
-                  </button>
-                </div>
-              </Card>
+             {/* Social Media */}
+<Card className="p-8 shadow-card border-0 bg-card">
+  <h3 className="text-2xl font-bold text-foreground mb-6">Follow Us</h3>
+  <div className="flex gap-4">
+    <a
+      href="https://www.facebook.com/uvuafrica"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
+                 rounded-lg flex items-center justify-center text-primary transition-smooth"
+    >
+      <Facebook size={20} />
+    </a>
+    <a
+      href="https://x.com/UVUAfrica/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
+                 rounded-lg flex items-center justify-center text-primary transition-smooth"
+    >
+      <Twitter size={20} />
+    </a>
+    <a
+      href="https://www.instagram.com/uvuafrica/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
+                 rounded-lg flex items-center justify-center text-primary transition-smooth"
+    >
+      <Instagram size={20} />
+    </a>
+    <a
+      href="https://www.linkedin.com/company/capacitiza/posts/?feedView=all"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
+                 rounded-lg flex items-center justify-center text-primary transition-smooth"
+    >
+      <Linkedin size={20} />
+    </a>
+  </div>
+</Card>
+
 
               {/* Newsletter */}
               <Card className="p-8 shadow-card border-0 bg-card">
