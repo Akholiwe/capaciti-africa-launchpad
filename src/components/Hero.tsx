@@ -3,6 +3,13 @@ import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="relative bg-white overflow-hidden">
       <div className="container mx-auto px-4 py-16 lg:py-24">
@@ -23,6 +30,7 @@ const Hero = () => {
                 variant="default" 
                 size="lg" 
                 className="bg-primary hover:bg-primary-light text-white"
+                onClick={() => scrollToSection('programs')}
               >
                 Explore Programs
                 <ArrowRight size={20} />
@@ -31,9 +39,10 @@ const Hero = () => {
                 variant="outline" 
                 size="lg" 
                 className="border-primary text-primary hover:bg-primary hover:text-white"
+                onClick={() => scrollToSection('stories')}
               >
                 <Play size={20} />
-                Watch Stories
+                Stories
               </Button>
             </div>
           </div>
