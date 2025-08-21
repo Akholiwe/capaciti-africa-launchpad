@@ -5,13 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import LocationMap from "./LocationMap";
 
 const Contact = () => {
   return (
@@ -30,6 +25,22 @@ const Contact = () => {
               Have questions about our programs? Want to partner with us? 
               We'd love to hear from you.
             </p>
+          </div>
+
+          {/* Location Map Section */}
+          <div className="mb-16">
+            <div className="text-center mb-12">
+              <Badge variant="secondary" className="mb-4 text-sm font-medium px-4 py-2">
+                Our Locations
+              </Badge>
+              <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+                Visit Us
+              </h3>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Find us at our convenient locations in Johannesburg and Cape Town
+              </p>
+            </div>
+            <LocationMap />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -95,25 +106,14 @@ const Contact = () => {
 
             {/* Contact Information */}
             <div className="space-y-8">
-              {/* Contact Details */}
+              {/* General Contact */}
               <Card className="p-8 shadow-card border-0 bg-card">
                 <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4">
-                    <MapPin className="w-6 h-6 text-primary mt-1" />
-                    <div>
-                      <div className="font-semibold text-foreground">Address</div>
-                      <div className="text-muted-foreground">
-                        19 Ameshoff St, Braamfontein<br />
-                        Johannesburg, 2000
-                      </div>
-                    </div>
-                  </div>
-                  
                   <div className="flex items-center gap-4">
                     <Phone className="w-6 h-6 text-primary" />
                     <div>
-                      <div className="font-semibold text-foreground">Phone</div>
+                      <div className="font-semibold text-foreground">General Enquiries</div>
                       <div className="text-muted-foreground">+27 (21) 409 7000</div>
                     </div>
                   </div>
