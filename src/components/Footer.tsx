@@ -20,6 +20,10 @@ const Footer = () => {
                   href="https://www.facebook.com/uvuafrica"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => {
+                    console.log('Facebook link clicked', e);
+                    window.open('https://www.facebook.com/uvuafrica', '_blank');
+                  }}
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth"
                 >
                   <Facebook size={18} />
@@ -28,6 +32,10 @@ const Footer = () => {
                   href="https://x.com/UVUAfrica/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => {
+                    console.log('Twitter link clicked', e);
+                    window.open('https://x.com/UVUAfrica/', '_blank');
+                  }}
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth"
                 >
                   <Twitter size={18} />
@@ -36,6 +44,10 @@ const Footer = () => {
                   href="https://www.instagram.com/uvuafrica/"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => {
+                    console.log('Instagram link clicked', e);
+                    window.open('https://www.instagram.com/uvuafrica/', '_blank');
+                  }}
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth"
                 >
                   <Instagram size={18} />
@@ -44,6 +56,10 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/capacitiza/posts/?feedView=all"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => {
+                    console.log('LinkedIn link clicked', e);
+                    window.open('https://www.linkedin.com/company/capacitiza/posts/?feedView=all', '_blank');
+                  }}
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth"
                 >
                   <Linkedin size={18} />

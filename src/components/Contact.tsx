@@ -129,6 +129,10 @@ const Contact = () => {
       href="https://www.facebook.com/uvuafrica"
       target="_blank"
       rel="noopener noreferrer"
+      onClick={(e) => {
+        console.log('Facebook link clicked', e);
+        window.open('https://www.facebook.com/uvuafrica', '_blank');
+      }}
       className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
                  rounded-lg flex items-center justify-center text-primary transition-smooth"
     >
@@ -138,6 +142,10 @@ const Contact = () => {
       href="https://x.com/UVUAfrica/"
       target="_blank"
       rel="noopener noreferrer"
+      onClick={(e) => {
+        console.log('Twitter link clicked', e);
+        window.open('https://x.com/UVUAfrica/', '_blank');
+      }}
       className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
                  rounded-lg flex items-center justify-center text-primary transition-smooth"
     >
@@ -147,6 +155,10 @@ const Contact = () => {
       href="https://www.instagram.com/uvuafrica/"
       target="_blank"
       rel="noopener noreferrer"
+      onClick={(e) => {
+        console.log('Instagram link clicked', e);
+        window.open('https://www.instagram.com/uvuafrica/', '_blank');
+      }}
       className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
                  rounded-lg flex items-center justify-center text-primary transition-smooth"
     >
@@ -156,6 +168,10 @@ const Contact = () => {
       href="https://www.linkedin.com/company/capacitiza/posts/?feedView=all"
       target="_blank"
       rel="noopener noreferrer"
+      onClick={(e) => {
+        console.log('LinkedIn link clicked', e);
+        window.open('https://www.linkedin.com/company/capacitiza/posts/?feedView=all', '_blank');
+      }}
       className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
                  rounded-lg flex items-center justify-center text-primary transition-smooth"
     >
