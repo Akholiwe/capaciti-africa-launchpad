@@ -18,8 +18,12 @@ const Header = () => {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-            <span className="text-white font-bold text-sm">C</span>
+          <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/12663fe1-663e-4a5d-a01a-52926f30d83f.png" 
+              alt="Capaciti Logo" 
+              className="w-full h-full object-cover"
+            />
           </div>
           <span className="text-xl font-bold text-secondary">CAPACITI</span>
         </div>
