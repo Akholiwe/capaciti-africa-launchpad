@@ -5,11 +5,10 @@ import { Quote } from "lucide-react";
 const Stories = () => {
   const stories = [
     {
-      name: "Kate Maakane",
-      role: "Junior Digital Administrator",
-      quote: "I Walked In With Flip-Flops. I Walked Out With Purpose.",
-      story: "CAPACITI saw potential beyond her circumstances and equipped her with Salesforce skills and meaningful support.",
-      image: "KM"
+      name: "Akholiwe Mabindisa",
+      role: "Cloud Associate",
+      quote: "Started with a knowledge fit for a computer, left with a server full of it.",
+      image: ""
     },
     {
       name: "Siphelo Nyandana", 
