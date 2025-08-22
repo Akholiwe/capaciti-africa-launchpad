@@ -133,7 +133,7 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold text-foreground mb-6">Follow Us</h3>
                 <div className="flex gap-4">
                   <a
-                    href="https://www.facebook.com/uvuafrica"
+                    href="https://www.facebook.com/capacitiza"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
