@@ -133,36 +133,25 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold text-foreground mb-6">Follow Us</h3>
                 <div className="flex gap-4">
                   <a
-                    href="https://www.facebook.com/uvuafrica"
+                    href="mailto:reception@uvuafrica.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Facebook"
+                    aria-label="Email"
                     className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
                                rounded-lg flex items-center justify-center text-primary transition-smooth"
                   >
-                    <Facebook size={20} />
+                    <Mail size={20} />
                   </a>
 
                   <a
-                    href="https://x.com/UVUAfrica"
+                    href="tel:+27214097000"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Twitter"
+                    aria-label="Phone"
                     className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
                                rounded-lg flex items-center justify-center text-primary transition-smooth"
                   >
-                    <Twitter size={20} />
-                  </a>
-
-                  <a
-                    href="https://www.instagram.com/uvuafrica"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Instagram"
-                    className="w-12 h-12 bg-primary/10 hover:bg-primary hover:text-primary-foreground 
-                               rounded-lg flex items-center justify-center text-primary transition-smooth"
-                  >
-                    <Instagram size={20} />
+                    <Phone size={20} />
                   </a>
 
                   <a
