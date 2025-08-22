@@ -8,7 +8,7 @@ const Stories = () => {
       name: "Akholiwe Mabindisa",
       role: "Cloud Associate",
       quote: "Started with a knowledge fit for a computer, left with a server full of it.",
-      image: ""
+      image: "AM"
     },
     {
       name: "Siphelo Nyandana", 
