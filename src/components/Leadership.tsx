@@ -19,7 +19,8 @@ const Leadership = () => {
     {
       name: "Nasheeta Du Toit",
       role: "Head of Talent",
-      initials: "ND"
+      initials: "ND",
+      image: "/lovable-uploads/89598ba6-39b7-4156-acca-497dc8a04405.png"
     },
     {
       name: "Chesarae K Pillay",
