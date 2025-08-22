@@ -17,22 +17,31 @@ const Footer = () => {
               </p>
               <div className="flex gap-4">
                 <a
-                  href="mailto:reception@uvuafrica.com"
+                  href="https://www.facebook.com/uvuafrica"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Email"
+                  aria-label="Facebook"
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth"
                 >
-                  <Mail size={18} />
+                  <Facebook size={18} />
                 </a>
                 <a
-                  href="tel:+27214097000"
+                  href="https://x.com/UVUAfrica"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Phone"
+                  aria-label="Twitter"
                   className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth"
                 >
-                  <Phone size={18} />
+                  <Twitter size={18} />
+                </a>
+                <a
+                  href="https://www.instagram.com/uvuafrica"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-smooth"
+                >
+                  <Instagram size={18} />
                 </a>
                 <a
                   href="https://za.linkedin.com/company/capacitiza"
