@@ -17,7 +17,7 @@ const Footer = () => {
               </p>
               <div className="flex gap-4">
                 <a
-                  href="https://www.facebook.com/capacitiza"
+                  href="https://www.facebook.com/uvuafrica"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
@@ -26,7 +26,7 @@ const Footer = () => {
                   <Facebook size={18} />
                 </a>
                 <a
-                  href="https://x.com/capacitiza"
+                  href="https://x.com/UVUAfrica"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Twitter"
@@ -35,7 +35,7 @@ const Footer = () => {
                   <Twitter size={18} />
                 </a>
                 <a
-                  href="https://www.instagram.com/capacitiza"
+                  href="https://www.instagram.com/uvuafrica"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
