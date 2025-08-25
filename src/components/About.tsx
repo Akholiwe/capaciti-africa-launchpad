@@ -1,17 +1,73 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Lightbulb, Users, Target, Heart } from "lucide-react";
+import { Lightbulb, Users, Target, Heart, Calendar, Award, Briefcase, Globe } from "lucide-react";
 
 const About = () => {
   const milestones = [
-    { year: "2010", event: "Organization founded under UVU Africa" },
-    { year: "2011", event: "Trained hundreds in Web Development" },
-    { year: "2015", event: "Launched digital career accelerators & entrepreneurship incubation" },
-    { year: "2016", event: "Secured R85 million (~$5.7M) Jobs Fund Grant for 3,000 ICT Jobs" },
-    { year: "2018", event: "#LoanFree campaign — canceled student loans for 2018–2020 cohorts" },
-    { year: "2023", event: "Partnered with Ardagh Group for global excellence in CT project" },
-    { year: "2024", event: "Launched first Tech Accelerator in Gqeberha via Jobs Fund" },
-    { year: "2025", event: "Achieved training of 6,500 youth with a 90% placement rate" },
+    { 
+      year: "2010", 
+      title: "Foundation & Early Beginnings",
+      event: "Organization founded under UVU Africa with a vision to democratize tech education across the continent",
+      icon: <Globe className="w-5 h-5" />,
+      category: "Foundation",
+      details: "Established as part of UVU Africa Group to address the digital skills gap in South Africa"
+    },
+    { 
+      year: "2011", 
+      title: "First Training Programs",
+      event: "Successfully trained hundreds of students in Web Development, establishing our core curriculum",
+      icon: <Users className="w-5 h-5" />,
+      category: "Education",
+      details: "Launched comprehensive web development bootcamps with focus on practical, industry-relevant skills"
+    },
+    { 
+      year: "2015", 
+      title: "Program Expansion",
+      event: "Launched digital career accelerators & entrepreneurship incubation programs",
+      icon: <Briefcase className="w-5 h-5" />,
+      category: "Growth",
+      details: "Expanded beyond basic training to include career development and startup incubation"
+    },
+    { 
+      year: "2016", 
+      title: "Major Funding Milestone",
+      event: "Secured R85 million (~$5.7M) Jobs Fund Grant for 3,000 ICT Jobs",
+      icon: <Award className="w-5 h-5" />,
+      category: "Funding",
+      details: "Landmark achievement enabling massive scale-up of training programs and job placement initiatives"
+    },
+    { 
+      year: "2018", 
+      title: "#LoanFree Initiative",
+      event: "Launched #LoanFree campaign — canceled student loans for 2018–2020 cohorts",
+      icon: <Heart className="w-5 h-5" />,
+      category: "Social Impact",
+      details: "Revolutionary approach to education accessibility, removing financial barriers for deserving students"
+    },
+    { 
+      year: "2023", 
+      title: "Global Partnerships",
+      event: "Partnered with Ardagh Group for global excellence in Cape Town project",
+      icon: <Globe className="w-5 h-5" />,
+      category: "Partnership",
+      details: "International collaboration bringing global standards and opportunities to local talent"
+    },
+    { 
+      year: "2024", 
+      title: "Geographic Expansion",
+      event: "Launched first Tech Accelerator in Gqeberha via Jobs Fund support",
+      icon: <Briefcase className="w-5 h-5" />,
+      category: "Expansion",
+      details: "Extended reach beyond major metros to serve underrepresented regions"
+    },
+    { 
+      year: "2025", 
+      title: "Milestone Achievement",
+      event: "Achieved training of 6,500+ youth with a 90% job placement rate",
+      icon: <Award className="w-5 h-5" />,
+      category: "Impact",
+      details: "Reached significant scale while maintaining exceptional outcomes and industry-leading placement rates"
+    },
   ];
 
   const values = [
@@ -65,46 +121,66 @@ const About = () => {
 
           {/* Interactive Horizontal Timeline */}
           <div>
-            <h3 className="text-3xl font-bold text-center mb-12 text-primary">Over 10+ Years of Innovation</h3>
+            <h3 className="text-3xl font-bold text-center mb-12 text-primary">15+ Years of Transformative Impact</h3>
             
-            {/* Interactive Horizontal Timeline */}
-            <div className="relative overflow-x-auto pb-8">
-              <div className="flex items-start justify-between min-w-max gap-6 px-4">
-                {/* Timeline line */}
-                <div className="absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary/80 to-primary/60 rounded-full"></div>
-                
+            {/* Vertical Timeline */}
+            <div className="relative max-w-4xl mx-auto">
+              {/* Timeline line */}
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/80 to-primary/60"></div>
+              
+              <div className="space-y-8">
                 {milestones.map((milestone, index) => (
-                  <div key={index} className="flex flex-col items-center text-center min-w-[160px] relative group cursor-pointer">
-                    {/* Interactive Timeline Dot */}
-                    <div className="relative z-10 mb-4">
-                      <div className="w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-all duration-300 group-hover:bg-primary-glow"></div>
-                      <div className="absolute inset-0 w-6 h-6 bg-primary/30 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div key={index} className="relative flex items-start group">
+                    {/* Timeline dot with icon */}
+                    <div className="relative z-10 flex items-center justify-center w-16 h-16 bg-primary rounded-full border-4 border-white shadow-lg group-hover:scale-110 transition-all duration-300 group-hover:shadow-glow">
+                      <div className="text-white">
+                        {milestone.icon}
+                      </div>
+                      <div className="absolute inset-0 w-16 h-16 bg-primary/20 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     
-                    {/* Year Badge */}
-                    <Badge variant="secondary" className="mb-3 text-sm font-bold group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                      {milestone.year}
-                    </Badge>
-                    
-                    {/* Event Card */}
-                    <Card className="p-4 shadow-card border-0 bg-card hover:shadow-elegant transition-all duration-300 group-hover:scale-105 max-w-[180px]">
-                      <p className="text-sm text-secondary/80 leading-relaxed">
-                        {milestone.event}
-                      </p>
-                    </Card>
-                    
-                    {/* Connecting line to dot */}
-                    <div className="absolute top-6 w-px h-8 bg-primary/30 group-hover:bg-primary transition-colors duration-300"></div>
+                    {/* Content */}
+                    <div className="ml-8 flex-1">
+                      <div className="flex items-center gap-4 mb-3">
+                        <Badge variant="secondary" className="text-sm font-bold group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                          {milestone.year}
+                        </Badge>
+                        <Badge variant="outline" className="text-xs">
+                          {milestone.category}
+                        </Badge>
+                      </div>
+                      
+                      <Card className="p-6 shadow-card border-0 bg-card hover:shadow-elegant transition-all duration-300 group-hover:scale-[1.02]">
+                        <h4 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                          {milestone.title}
+                        </h4>
+                        <p className="text-base text-secondary/90 leading-relaxed mb-3">
+                          {milestone.event}
+                        </p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          {milestone.details}
+                        </p>
+                      </Card>
+                    </div>
                   </div>
                 ))}
               </div>
-              
-              {/* Timeline Progress Indicator */}
-              <div className="absolute -top-4 left-4">
-                <Badge variant="default" className="bg-primary text-white shadow-lg">
-                  2010 - 2025 Journey
-                </Badge>
-              </div>
+            </div>
+            
+            {/* Timeline Summary */}
+            <div className="mt-16 text-center">
+              <Card className="p-8 shadow-card border-0 bg-gradient-to-r from-primary/5 to-secondary/5">
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <Calendar className="w-6 h-6 text-primary" />
+                  <Badge variant="default" className="bg-primary text-white shadow-lg text-base px-4 py-2">
+                    2010 - 2025: 15 Years of Excellence
+                  </Badge>
+                </div>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                  From a small training organization to Africa's leading digital talent accelerator, 
+                  our journey reflects unwavering commitment to empowering youth through technology education.
+                </p>
+              </Card>
             </div>
           </div>
         </div>
