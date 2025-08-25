@@ -13,6 +13,7 @@ import sayouthLogo from "@/assets/logos/sayouth-logo.png";
 import yes4youthLogo from "@/assets/logos/yes4youth-logo.png";
 import micsetaLogo from "@/assets/logos/micseta-logo.png";
 import exlLogo from "@/assets/logos/exl-logo.png";
+import ardaghLogo from "@/assets/logos/ardagh-logo.png";
 
 const Impact = () => {
   const metrics = [
@@ -52,7 +53,7 @@ const Impact = () => {
     { name: "YES4Youth", logo: yes4youthLogo },
     { name: "Micseta", logo: micsetaLogo },
     { name: "Microsoft", logo: microsoftLogo },
-    { name: "Ardagh", logo: null },
+    { name: "Ardagh", logo: ardaghLogo },
     { name: "IBM", logo: ibmLogo },
     { name: "Coursera", logo: courseraLogo },
     { name: "EXL", logo: exlLogo }
