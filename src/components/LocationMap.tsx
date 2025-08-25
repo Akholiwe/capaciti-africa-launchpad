@@ -91,27 +91,6 @@ const LocationMap = () => {
 
   return (
     <div className="space-y-6">
-      {!isTokenSet && (
-        <Card className="p-6 bg-card border-0 shadow-card">
-          <h3 className="text-lg font-semibold mb-4 text-foreground">Map Setup Required</h3>
-          <p className="text-muted-foreground mb-4 text-sm">
-            To display the interactive map, please enter your Mapbox public token. 
-            You can get one at <a href="https://mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">mapbox.com</a>
-          </p>
-          <div className="flex gap-2">
-            <Input
-              type="text"
-              placeholder="Enter your Mapbox public token"
-              value={mapboxToken}
-              onChange={(e) => setMapboxToken(e.target.value)}
-              className="flex-1"
-            />
-            <Button onClick={handleSetToken} variant="hero">
-              Load Map
-            </Button>
-          </div>
-        </Card>
-      )}
       
       <div className="grid lg:grid-cols-3 gap-6">
         {/* Location Cards */}

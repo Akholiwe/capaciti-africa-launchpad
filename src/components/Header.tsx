@@ -41,11 +41,8 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* CTA Button */}
+        {/* Navigation spacing */}
         <div className="hidden md:block">
-          <Button variant="default" size="sm" className="bg-primary hover:bg-primary-light text-white">
-            Apply Now
-          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -71,9 +68,6 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
-            <Button variant="hero" size="sm" className="w-full">
-              Apply Now
-            </Button>
           </nav>
         </div>
       )}

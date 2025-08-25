@@ -131,9 +131,9 @@ const Programs = () => {
                     </div>
                   </div>
 
-                  <Button variant="hero" className="w-full">
-                    Apply Now
-                  </Button>
+                  <div className="text-center text-sm text-muted-foreground">
+                    Contact us for application details
+                  </div>
                 </Card>
               ))}
             </div>
