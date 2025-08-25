@@ -83,44 +83,28 @@ const Footer = () => {
             </div>
 
             {/* Contact Info */}
-<div>
-  <h4 className="text-xl font-semibold mb-4">Contact</h4>
-  <div className="space-y-3">
-    {/* Johannesburg */}
-    <div className="flex items-start gap-3">
-      <MapPin size={18} className="mt-1 text-primary-foreground/80" />
-      <div className="text-primary-foreground/80">
-        19 Ameshoff St<br />
-        Braamfontein<br />
-        Johannesburg, 2000
-      </div>
-    </div>
-
-    {/* Cape Town */}
-    <div className="flex items-start gap-3">
-      <MapPin size={18} className="mt-1 text-primary-foreground/80" />
-      <div className="text-primary-foreground/80">
-        95 Durham Ave<br />
-        Salt River<br />
-        Cape Town, 8001<br />
-        Western Cape, South Africa
-      </div>
-    </div>
-
-    {/* Phone */}
-    <div className="flex items-center gap-3">
-      <Phone size={18} className="text-primary-foreground/80" />
-      <span className="text-primary-foreground/80">+27 (21) 409 7000</span>
-    </div>
-
-    {/* Email */}
-    <div className="flex items-center gap-3">
-      <Mail size={18} className="text-primary-foreground/80" />
-      <span className="text-primary-foreground/80">reception@uvuafrica.com</span>
-    </div>
-  </div>
-</div>
-
+            <div>
+              <h4 className="text-xl font-semibold mb-4">Contact</h4>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <MapPin size={18} className="mt-1 text-primary-foreground/80" />
+                  <div className="text-primary-foreground/80">
+                    19 Ameshoff St<br />
+                    Braamfontein<br />
+                    Johannesburg, 2000
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Phone size={18} className="text-primary-foreground/80" />
+                  <span className="text-primary-foreground/80">+27 (21) 409 7000</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Mail size={18} className="text-primary-foreground/80" />
+                  <span className="text-primary-foreground/80">reception@uvuafrica.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Bottom Bar */}
           <div className="border-t border-primary-foreground/20 pt-8 flex flex-col md:flex-row justify-between items-center">
