@@ -123,35 +123,37 @@ const About = () => {
           <div>
             <h3 className="text-3xl font-bold text-center mb-12 text-primary">15+ Years of Transformative Impact</h3>
             
-            {/* Vertical Timeline */}
-            <div className="relative max-w-4xl mx-auto">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/80 to-primary/60"></div>
+            {/* Horizontal Timeline */}
+            <div className="relative max-w-7xl mx-auto overflow-x-auto pb-8">
+              {/* Timeline container with horizontal scroll */}
+              <div className="relative min-w-max px-8">
+                {/* Horizontal timeline line */}
+                <div className="absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-primary/80 to-primary/60"></div>
               
-              <div className="space-y-8">
-                {milestones.map((milestone, index) => (
-                  <div key={index} className="relative flex items-start group">
-                    {/* Timeline dot with icon */}
-                    <div className="relative z-10 flex items-center justify-center w-16 h-16 bg-primary rounded-full border-4 border-white shadow-lg group-hover:scale-110 transition-all duration-300 group-hover:shadow-glow">
-                      <div className="text-white">
-                        {milestone.icon}
-                      </div>
-                      <div className="absolute inset-0 w-16 h-16 bg-primary/20 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    
-                    {/* Content */}
-                    <div className="ml-8 flex-1">
-                      <div className="flex items-center gap-4 mb-3">
-                        <Badge variant="secondary" className="text-sm font-bold group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                          {milestone.year}
-                        </Badge>
-                        <Badge variant="outline" className="text-xs">
-                          {milestone.category}
-                        </Badge>
+                {/* Horizontal timeline items */}
+                <div className="flex items-start gap-8">
+                  {milestones.map((milestone, index) => (
+                    <div key={index} className="relative flex flex-col items-center group min-w-[320px]">
+                      {/* Timeline dot with icon */}
+                      <div className="relative z-10 flex items-center justify-center w-16 h-16 bg-primary rounded-full border-4 border-white shadow-lg group-hover:scale-110 transition-all duration-300 group-hover:shadow-glow mb-6">
+                        <div className="text-white">
+                          {milestone.icon}
+                        </div>
+                        <div className="absolute inset-0 w-16 h-16 bg-primary/20 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
                       
-                      <Card className="p-6 shadow-card border-0 bg-card hover:shadow-elegant transition-all duration-300 group-hover:scale-[1.02]">
-                        <h4 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                      {/* Content card */}
+                      <Card className="w-full p-6 shadow-card border-0 bg-card hover:shadow-elegant transition-all duration-300 group-hover:scale-[1.02] min-h-[280px]">
+                        <div className="flex flex-col gap-3 mb-4">
+                          <Badge variant="secondary" className="text-lg font-bold group-hover:bg-primary group-hover:text-white transition-all duration-300 w-fit">
+                            {milestone.year}
+                          </Badge>
+                          <Badge variant="outline" className="text-xs w-fit">
+                            {milestone.category}
+                          </Badge>
+                        </div>
+                        
+                        <h4 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300 leading-tight">
                           {milestone.title}
                         </h4>
                         <p className="text-base text-secondary/90 leading-relaxed mb-3">
@@ -161,9 +163,23 @@ const About = () => {
                           {milestone.details}
                         </p>
                       </Card>
+                      
+                      {/* Connection line to next item (except for last item) */}
+                      {index < milestones.length - 1 && (
+                        <div className="absolute top-8 -right-4 w-8 h-0.5 bg-primary/40 z-0"></div>
+                      )}
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+              </div>
+              
+              {/* Scroll indicator */}
+              <div className="flex justify-center mt-4">
+                <div className="text-sm text-muted-foreground flex items-center gap-2">
+                  <span>←</span>
+                  <span>Scroll horizontally to explore our journey</span>
+                  <span>→</span>
+                </div>
               </div>
             </div>
             
