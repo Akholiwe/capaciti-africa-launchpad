@@ -9,6 +9,10 @@ import naspersLogo from "@/assets/logos/naspers-logo.png";
 import media24Logo from "@/assets/logos/media24-logo.png";
 import investecLogo from "@/assets/logos/investec-logo.png";
 import courseraLogo from "@/assets/logos/coursera-logo.png";
+import sayouthLogo from "@/assets/logos/sayouth-logo.png";
+import yes4youthLogo from "@/assets/logos/yes4youth-logo.png";
+import micsetaLogo from "@/assets/logos/micseta-logo.png";
+import exlLogo from "@/assets/logos/exl-logo.png";
 
 const Impact = () => {
   const metrics = [
@@ -44,14 +48,14 @@ const Impact = () => {
     { name: "Media24", logo: media24Logo },
     { name: "AWS", logo: awsLogo },
     { name: "Investec", logo: investecLogo },
-    { name: "SAYouth", logo: null },
-    { name: "YES4Youth", logo: null },
-    { name: "Micseta", logo: null },
+    { name: "SAYouth", logo: sayouthLogo },
+    { name: "YES4Youth", logo: yes4youthLogo },
+    { name: "Micseta", logo: micsetaLogo },
     { name: "Microsoft", logo: microsoftLogo },
     { name: "Ardagh", logo: null },
     { name: "IBM", logo: ibmLogo },
     { name: "Coursera", logo: courseraLogo },
-    { name: "EXL", logo: null }
+    { name: "EXL", logo: exlLogo }
   ];
 
   return (
