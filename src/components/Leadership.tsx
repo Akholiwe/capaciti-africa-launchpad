@@ -53,7 +53,7 @@ const Leadership = () => {
             {leaders.map((leader, index) => (
               <Card key={index} className="p-8 text-center shadow-card border-0 bg-card hover:shadow-elegant transition-smooth group">
                 {leader.image ? (
-                  <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 ring-2 ring-primary/20 group-hover:ring-primary/40 transition-smooth">
+                  <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 ring-2 ring-primary/20 group-hover:ring-primary/40 transition-smooth">
                     <img 
                       src={leader.image} 
                       alt={leader.name}
@@ -61,7 +61,7 @@ const Leadership = () => {
                     />
                   </div>
                 ) : (
-                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-xl mx-auto mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-smooth">
+                  <div className="w-32 h-32 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-3xl mx-auto mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-smooth">
                     {leader.initials}
                   </div>
                 )}
