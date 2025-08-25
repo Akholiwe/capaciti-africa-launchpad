@@ -49,32 +49,33 @@ const Leadership = () => {
           </div>
 
           {/* Leadership Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-  {leaders.map((leader, index) => (
-    <Card
-      key={index}
-      className="p-8 text-center shadow-card border-0 bg-card hover:shadow-elegant transition-smooth group"
-    >
-      {leader.image ? (
-        <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 ring-2 ring-primary/20 group-hover:ring-primary/40 transition-smooth">
-          <img
-            src={leader.image}
-            alt={leader.name}
-            className="w-full h-full object-cover"
-          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {leaders.map((leader, index) => (
+              <Card key={index} className="p-8 text-center shadow-card border-0 bg-card hover:shadow-elegant transition-smooth group">
+                {leader.image ? (
+                  <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 ring-2 ring-primary/20 group-hover:ring-primary/40 transition-smooth">
+                    <img 
+                      src={leader.image} 
+                      alt={leader.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-xl mx-auto mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-smooth">
+                    {leader.initials}
+                  </div>
+                )}
+                <h3 className="text-xl font-bold text-foreground mb-2">
+                  {leader.name}
+                </h3>
+                <p className="text-muted-foreground">
+                  {leader.role}
+                </p>
+              </Card>
+            ))}
+          </div>
         </div>
-      ) : (
-        <div className="w-32 h-32 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold text-2xl mx-auto mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-smooth">
-          {leader.initials}
-        </div>
-      )}
-      <h3 className="text-xl font-bold text-foreground mb-2">
-        {leader.name}
-      </h3>
-      <p className="text-muted-foreground">{leader.role}</p>
-    </Card>
-  ))}
-</div>
+      </div>
     </section>
   );
 };
