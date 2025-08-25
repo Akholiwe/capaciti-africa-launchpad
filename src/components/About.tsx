@@ -63,51 +63,46 @@ const About = () => {
             ))}
           </div>
 
-          {/* Interactive Timeline */}
+          {/* Interactive Horizontal Timeline */}
           <div>
             <h3 className="text-3xl font-bold text-center mb-12 text-primary">Over 10+ Years of Innovation</h3>
             
-            {/* Interactive Timeline */}
-            <div className="relative max-w-5xl mx-auto">
-              {/* Timeline line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-primary/50 to-primary/20"></div>
-              
-              <div className="space-y-12">
+            {/* Interactive Horizontal Timeline */}
+            <div className="relative overflow-x-auto pb-8">
+              <div className="flex items-start justify-between min-w-max gap-6 px-4">
+                {/* Timeline line */}
+                <div className="absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary/80 to-primary/60 rounded-full"></div>
+                
                 {milestones.map((milestone, index) => (
-                  <div 
-                    key={index} 
-                    className={`flex items-center gap-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} group`}
-                  >
-                    {/* Content Card */}
-                    <div className={`flex-1 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                      <Card className="p-6 shadow-card border-0 bg-card hover:shadow-elegant transition-all duration-300 group-hover:scale-105 cursor-pointer">
-                        <div className="flex items-center gap-3 mb-3">
-                          <Badge variant="secondary" className="text-xs font-semibold">
-                            {milestone.year}
-                          </Badge>
-                        </div>
-                        <p className="text-secondary/80 leading-relaxed">
-                          {milestone.event}
-                        </p>
-                      </Card>
+                  <div key={index} className="flex flex-col items-center text-center min-w-[160px] relative group cursor-pointer">
+                    {/* Interactive Timeline Dot */}
+                    <div className="relative z-10 mb-4">
+                      <div className="w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-all duration-300 group-hover:bg-primary-glow"></div>
+                      <div className="absolute inset-0 w-6 h-6 bg-primary/30 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     
-                    {/* Timeline Dot */}
-                    <div className="relative z-10">
-                      <div className="w-6 h-6 bg-primary rounded-full border-4 border-white shadow-lg group-hover:scale-125 transition-transform duration-300 group-hover:bg-primary-glow"></div>
-                      <div className="absolute inset-0 w-6 h-6 bg-primary/30 rounded-full animate-pulse"></div>
-                    </div>
+                    {/* Year Badge */}
+                    <Badge variant="secondary" className="mb-3 text-sm font-bold group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                      {milestone.year}
+                    </Badge>
                     
-                    {/* Spacer */}
-                    <div className="flex-1"></div>
+                    {/* Event Card */}
+                    <Card className="p-4 shadow-card border-0 bg-card hover:shadow-elegant transition-all duration-300 group-hover:scale-105 max-w-[180px]">
+                      <p className="text-sm text-secondary/80 leading-relaxed">
+                        {milestone.event}
+                      </p>
+                    </Card>
+                    
+                    {/* Connecting line to dot */}
+                    <div className="absolute top-6 w-px h-8 bg-primary/30 group-hover:bg-primary transition-colors duration-300"></div>
                   </div>
                 ))}
               </div>
               
-              {/* Floating Year Indicator */}
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              {/* Timeline Progress Indicator */}
+              <div className="absolute -top-4 left-4">
                 <Badge variant="default" className="bg-primary text-white shadow-lg">
-                  2010 - 2025
+                  2010 - 2025 Journey
                 </Badge>
               </div>
             </div>
