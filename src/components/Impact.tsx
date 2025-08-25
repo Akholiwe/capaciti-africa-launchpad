@@ -1,6 +1,14 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { TrendingUp, Users, Award, Building } from "lucide-react";
+import awsLogo from "@/assets/logos/aws-logo.png";
+import microsoftLogo from "@/assets/logos/microsoft-logo.png";
+import ibmLogo from "@/assets/logos/ibm-logo.png";
+import absaLogo from "@/assets/logos/absa-logo.png";
+import naspersLogo from "@/assets/logos/naspers-logo.png";
+import media24Logo from "@/assets/logos/media24-logo.png";
+import investecLogo from "@/assets/logos/investec-logo.png";
+import courseraLogo from "@/assets/logos/coursera-logo.png";
 
 const Impact = () => {
   const metrics = [
@@ -31,8 +39,19 @@ const Impact = () => {
   ];
 
   const partners = [
-    "Absa", "Naspers", "Media24", "AWS", "Investec", "SAYouth", 
-    "YES4Youth", "Micseta", "Microsoft", "Ardagh", "IBM", "Coursera", "EXL"
+    { name: "Absa", logo: absaLogo },
+    { name: "Naspers", logo: naspersLogo },
+    { name: "Media24", logo: media24Logo },
+    { name: "AWS", logo: awsLogo },
+    { name: "Investec", logo: investecLogo },
+    { name: "SAYouth", logo: null },
+    { name: "YES4Youth", logo: null },
+    { name: "Micseta", logo: null },
+    { name: "Microsoft", logo: microsoftLogo },
+    { name: "Ardagh", logo: null },
+    { name: "IBM", logo: ibmLogo },
+    { name: "Coursera", logo: courseraLogo },
+    { name: "EXL", logo: null }
   ];
 
   return (
@@ -83,11 +102,19 @@ const Impact = () => {
                 {partners.map((partner, index) => (
                   <div 
                     key={index} 
-                    className="text-center p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-smooth"
+                    className="flex items-center justify-center p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-smooth h-20"
                   >
-                    <div className="text-lg font-semibold text-muted-foreground hover:text-foreground transition-smooth">
-                      {partner}
-                    </div>
+                    {partner.logo ? (
+                      <img 
+                        src={partner.logo} 
+                        alt={`${partner.name} logo`}
+                        className="max-h-12 max-w-full object-contain filter brightness-75 hover:brightness-100 transition-smooth"
+                      />
+                    ) : (
+                      <div className="text-sm font-semibold text-muted-foreground hover:text-foreground transition-smooth">
+                        {partner.name}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
