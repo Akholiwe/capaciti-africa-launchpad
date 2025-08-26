@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import "@/styles/globals.css"; // you can leave this empty if you don't want global CSS
 import { useEffect } from "react";
 
 export default function App({ Component, pageProps }: AppProps) {
