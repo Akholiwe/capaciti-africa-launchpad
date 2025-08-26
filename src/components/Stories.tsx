@@ -26,6 +26,13 @@ const Stories = () => {
         "Through dedication and consistent practice, Mavuso grew confident in his abilities and now thrives in the cloud space.",
       image: "MW",
     },
+    {
+      name: "Esihle Mbangeleli",
+      role: "Cloud Associate",
+      quote: "Every challenge is a stepping stone towards growth",
+      story: "Through resilience and dedication, Esihle continues to turn opportunities into achievements, shaping a future filled with purpose and impact.",
+      image: "EM",
+    },   
   ];
 
   return (
