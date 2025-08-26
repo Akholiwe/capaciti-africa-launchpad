@@ -8,6 +8,7 @@ const Stories = () => {
       name: "Akholiwe Mabindisa",
       role: "Cloud Associate",
       quote: "Started with a knowledge fit for a computer, left with a server full of it.",
+      story: "Akholiwe quickly mastered key cloud concepts and applied them to real-world projects, paving the way for her tech career.",
       image: "AM"
     },
     {
@@ -16,7 +17,15 @@ const Stories = () => {
       quote: "Grateful to be part of CAPACITI's supportive family.",
       story: "Initially overwhelmed, Siphelo found sense of belonging and secured an internship at Loop—launching a flourishing career.",
       image: "SN"
-    }
+    },
+    {
+      name: "Mavuso Wiliams",
+      role: "Cloud Associate",
+      quote: "Capaciti may be one of the great things to happen to me, giving me sense of supportive and a plartform to challenge myself to grow.",
+      story:
+        "Through dedication and consistent practice, Mavuso grew confident in his abilities and now thrives in the cloud space.",
+      image: "MW",
+    },
   ];
 
   return (
