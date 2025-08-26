@@ -19,6 +19,17 @@ export default {
 		},
 		extend: {
 			colors: {
+	spacecadet: "#2B2D42", // Space Cadet
+    pink: "#FF6B81",       // Pink
+    purple: "#9B5DE5",     // Purple
+    salmon: "#FA8072",     // Salmon
+    // existing colors...
+  },
+  fontFamily: {
+    sans: ["Poppins", "sans-serif"], // add Poppins
+  },
+  // keep your borderRadius, keyframes, animations...
+}
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
