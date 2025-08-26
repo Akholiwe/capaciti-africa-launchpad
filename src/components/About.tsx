@@ -89,15 +89,15 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-16 lg:py-24 bg-white">
+    <section id="about" className="py-16 lg:py-24 font-poppins bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-secondary mb-8">
+            <h2 className="text-3xl lg:text-4xl font-bold text-spaceKadet mb-8">
               About Capaciti
             </h2>
-            <p className="text-lg text-secondary/80 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Established in 2010, CAPACITI, part of the UVU Africa Group, is at the forefront of 
               preparing young individuals for the tech sector. CAPACITI has emerged as one of South 
               Africa's leading digital talent accelerators, annually training and placing approximately 
@@ -110,42 +110,39 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             {values.map((value, index) => (
               <div key={index} className="text-center p-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <div className="text-primary">{value.icon}</div>
+                <div className="w-16 h-16 bg-pink/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="text-pink">{value.icon}</div>
                 </div>
-                <h3 className="text-xl font-semibold text-secondary mb-3">{value.title}</h3>
-                <p className="text-secondary/70 leading-relaxed">{value.description}</p>
+                <h3 className="text-xl font-semibold text-purple mb-3">{value.title}</h3>
+                <p className="text-salmon/80 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
 
           {/* Interactive Horizontal Timeline */}
           <div>
-            <h3 className="text-3xl font-bold text-center mb-12 text-primary">15+ Years of Transformative Impact</h3>
+            <h3 className="text-3xl font-bold text-center mb-12 text-purple">
+              15+ Years of Transformative Impact
+            </h3>
             
             {/* Horizontal Timeline */}
             <div className="relative max-w-7xl mx-auto overflow-x-auto pb-8">
-              {/* Timeline container with horizontal scroll */}
               <div className="relative min-w-max px-8">
-                {/* Horizontal timeline line */}
-                <div className="absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-primary/80 to-primary/60"></div>
+                {/* Timeline line */}
+                <div className="absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-pink via-purple to-salmon"></div>
               
-                {/* Horizontal timeline items */}
+                {/* Timeline items */}
                 <div className="flex items-start gap-8">
                   {milestones.map((milestone, index) => (
                     <div key={index} className="relative flex flex-col items-center group min-w-[320px]">
-                      {/* Timeline dot with icon */}
-                      <div className="relative z-10 flex items-center justify-center w-16 h-16 bg-primary rounded-full border-4 border-white shadow-lg group-hover:scale-110 transition-all duration-300 group-hover:shadow-glow mb-6">
-                        <div className="text-white">
-                          {milestone.icon}
-                        </div>
-                        <div className="absolute inset-0 w-16 h-16 bg-primary/20 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="relative z-10 flex items-center justify-center w-16 h-16 bg-purple rounded-full border-4 border-white shadow-lg group-hover:scale-110 transition-all duration-300 group-hover:shadow-glow mb-6">
+                        <div className="text-white">{milestone.icon}</div>
+                        <div className="absolute inset-0 w-16 h-16 bg-purple/20 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
                       
-                      {/* Content card */}
                       <Card className="w-full p-6 shadow-card border-0 bg-card hover:shadow-elegant transition-all duration-300 group-hover:scale-[1.02] min-h-[280px]">
                         <div className="flex flex-col gap-3 mb-4">
-                          <Badge variant="secondary" className="text-lg font-bold group-hover:bg-primary group-hover:text-white transition-all duration-300 w-fit">
+                          <Badge variant="secondary" className="text-lg font-bold group-hover:bg-salmon group-hover:text-white transition-all duration-300 w-fit">
                             {milestone.year}
                           </Badge>
                           <Badge variant="outline" className="text-xs w-fit">
@@ -153,10 +150,10 @@ const About = () => {
                           </Badge>
                         </div>
                         
-                        <h4 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300 leading-tight">
+                        <h4 className="text-xl font-bold text-spaceKadet mb-3 group-hover:text-pink transition-colors duration-300 leading-tight">
                           {milestone.title}
                         </h4>
-                        <p className="text-base text-secondary/90 leading-relaxed mb-3">
+                        <p className="text-base text-muted-foreground leading-relaxed mb-3">
                           {milestone.event}
                         </p>
                         <p className="text-sm text-muted-foreground leading-relaxed">
@@ -164,9 +161,8 @@ const About = () => {
                         </p>
                       </Card>
                       
-                      {/* Connection line to next item (except for last item) */}
                       {index < milestones.length - 1 && (
-                        <div className="absolute top-8 -right-4 w-8 h-0.5 bg-primary/40 z-0"></div>
+                        <div className="absolute top-8 -right-4 w-8 h-0.5 bg-muted z-0"></div>
                       )}
                     </div>
                   ))}
@@ -185,10 +181,10 @@ const About = () => {
             
             {/* Timeline Summary */}
             <div className="mt-16 text-center">
-              <Card className="p-8 shadow-card border-0 bg-gradient-to-r from-primary/5 to-secondary/5">
+              <Card className="p-8 shadow-card border-0 bg-gradient-to-r from-pink/5 via-purple/5 to-salmon/5">
                 <div className="flex items-center justify-center gap-2 mb-4">
-                  <Calendar className="w-6 h-6 text-primary" />
-                  <Badge variant="default" className="bg-primary text-white shadow-lg text-base px-4 py-2">
+                  <Calendar className="w-6 h-6 text-purple" />
+                  <Badge variant="default" className="bg-pink text-white shadow-lg text-base px-4 py-2">
                     2010 - 2025: 15 Years of Excellence
                   </Badge>
                 </div>
