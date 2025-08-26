@@ -1,35 +1,5 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
-  darkMode: "class",
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {
-      fontFamily: {
-        sans: ["Poppins", "sans-serif"],
-      },
-      colors: {
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        card: "hsl(var(--card))",
-        border: "hsl(var(--border))",
-
-        spacecadet: "#2B2D42", 
-        purple: "#7C3AED",
-        pink: "#EC4899",
-        salmon: "#FA8072",
-      },
-    },
-  },
-  plugins: [],
-};
-
-export default config;
-
-
 export default {
   darkMode: ["class"],
   content: [
