@@ -14,15 +14,9 @@ const Stories = () => {
       name: "Siphelo Nyandana", 
       role: "DevOps Engineer",
       quote: "Grateful to be part of CAPACITI's supportive family.",
-      #story: "Initially overwhelmed, Siphelo found sense of belonging and secured an internship at Loop—launching a flourishing career.",
+      story: "Initially overwhelmed, Siphelo found sense of belonging and secured an internship at Loop—launching a flourishing career.",
       image: "SN"
-    },
-    {
-      name: "Mavuso Williams",
-      role: "Cloud Associate",
-      quote: "Capaciti may be one of the great things to happen to me, giving me sense of supportive and a plartform to challenge myself to grow.",
-      image: "MW"
-    },
+    }
   ];
 
   return (
