@@ -1,16 +1,27 @@
-import type { AppProps } from "next/app";
-import "@/styles/globals.css"; // you can leave this empty if you don't want global CSS
-import { useEffect } from "react";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as Sonner } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
 
-export default function App({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    // optional: enable dark mode by default
-    document.documentElement.classList.add("dark");
-  }, []);
+const queryClient = new QueryClient();
 
-  return (
-    <div className="min-h-screen bg-background text-foreground font-sans">
-      <Component {...pageProps} />
-    </div>
-  );
-}
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Index />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
+);
+
+export default App;
