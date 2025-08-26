@@ -1,4 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Global font + reset */
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global background & text */
+body {
+  background-color: #2B2D42; /* Space Cadet */
+  color: #FFFFFF;
+  line-height: 1.6;
+}
+
+/* Card utility for all pages */
+.card {
+  @apply bg-purple text-white rounded-2xl shadow-lg p-6 transition-transform transform hover:scale-105;
+}
+
+/* Accent text */
+.accent {
+  color: #FF6EC7; /* Pink */
+}
+
+.accent-alt {
+  color: #FF6F61; /* Salmon */
+}
 
 #root {
   max-width: 1280px;
