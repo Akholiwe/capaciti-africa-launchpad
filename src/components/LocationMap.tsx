@@ -28,6 +28,13 @@ const locations: Location[] = [
     address: '97 Durham Ave, Salt River, Cape Town, 7925',
     coordinates: [18.4741, -33.9249],
     phone: '+27 (21) 409 7000'
+  },
+  {
+    id: 'hazyview',
+    name: 'HazyView Capaciti Hollard Campus',
+    address: 'HazyView, Mpumalanga',
+    coordinates: [31.1206, -25.0448],
+    phone: '+27 (13) 737 7000'
   }
 ];
 
@@ -92,9 +99,26 @@ const LocationMap = () => {
   return (
     <div className="space-y-6">
       
-      <div className="grid lg:grid-cols-3 gap-6">
+      <div className="space-y-6">
+        {/* Google Maps Embed */}
+        <div className="w-full">
+          <Card className="p-0 bg-card border-0 shadow-card overflow-hidden">
+            <iframe 
+              src="https://www.google.com/maps/d/embed?mid=1CTQkurguAWi7QPBRy8nQVOnjXa_JpY4&ehbc=2E312F&noprof=1" 
+              width="100%" 
+              height="480"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-lg"
+            />
+          </Card>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-6">
         {/* Location Cards */}
-        <div className="lg:col-span-1 space-y-4">
+          <div className="lg:col-span-3 grid md:grid-cols-3 gap-4">
           {locations.map((location) => (
             <Card key={location.id} className="p-6 bg-card border-0 shadow-card">
               <div className="flex items-start gap-3 mb-4">
@@ -117,16 +141,6 @@ const LocationMap = () => {
             </Card>
           ))}
         </div>
-
-        {/* Map */}
-        <div className="lg:col-span-2">
-          <Card className="p-0 bg-card border-0 shadow-card overflow-hidden">
-            <div 
-              ref={mapContainer} 
-              className="w-full h-96 rounded-lg"
-              style={{ minHeight: '400px' }}
-            />
-          </Card>
         </div>
       </div>
     </div>
