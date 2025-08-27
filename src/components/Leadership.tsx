@@ -57,7 +57,7 @@ const Leadership = () => {
                     <img 
                       src={leader.image} 
                       alt={leader.name}
-                      className="w-full h-full object-cover object-center"
+                      className="w-full h-full object-cover object-top"
                     />
                   </div>
                 ) : (
