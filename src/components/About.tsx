@@ -125,72 +125,96 @@ const About = () => {
               15+ Years of Transformative Impact
             </h3>
             
-            {/* Horizontal Timeline */}
-            <div className="relative max-w-7xl mx-auto overflow-x-auto pb-8">
-              <div className="relative min-w-max px-8">
-                {/* Timeline line */}
-                <div className="absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-pink via-purple to-salmon"></div>
-              
-                {/* Timeline items */}
-                <div className="flex items-start gap-8">
+            {/* Enhanced Horizontal Timeline */}
+            <div className="relative">
+              {/* Timeline Container with Horizontal Scroll */}
+              <div className="overflow-x-auto pb-8">
+                <div className="relative flex items-start min-w-max px-8 py-8">
+                  {/* Horizontal Timeline Line */}
+                  <div className="absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-pink via-purple to-salmon rounded-full shadow-sm"></div>
+                  
+                  {/* Timeline Items */}
                   {milestones.map((milestone, index) => (
-                    <div key={index} className="relative flex flex-col items-center group min-w-[320px]">
-                      <div className="relative z-10 flex items-center justify-center w-16 h-16 bg-purple rounded-full border-4 border-white shadow-lg group-hover:scale-110 transition-all duration-300 group-hover:shadow-glow mb-6">
-                        <div className="text-white">{milestone.icon}</div>
-                        <div className="absolute inset-0 w-16 h-16 bg-purple/20 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div key={index} className="relative flex flex-col items-center group" style={{ minWidth: '320px', marginRight: index < milestones.length - 1 ? '2rem' : '0' }}>
+                      {/* Timeline Dot */}
+                      <div className="relative z-20 flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple to-pink rounded-full border-4 border-white shadow-lg group-hover:scale-110 transition-all duration-300 group-hover:shadow-glow mb-8">
+                        <div className="text-white text-lg">{milestone.icon}</div>
+                        <div className="absolute inset-0 w-16 h-16 bg-gradient-to-br from-purple/30 to-pink/30 rounded-full animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </div>
                       
-                      <Card className="w-full p-6 shadow-card border-0 bg-card hover:shadow-elegant transition-all duration-300 group-hover:scale-[1.02] min-h-[280px]">
-                        <div className="flex flex-col gap-3 mb-4">
-                          <Badge variant="secondary" className="text-lg font-bold group-hover:bg-salmon group-hover:text-white transition-all duration-300 w-fit">
+                      {/* Milestone Card */}
+                      <Card className="w-full p-6 shadow-card border-0 bg-card hover:shadow-elegant transition-all duration-300 group-hover:scale-[1.02] min-h-[320px] relative">
+                        {/* Year Badge - Prominent Display */}
+                        <div className="flex items-center justify-between mb-4">
+                          <Badge variant="secondary" className="text-2xl font-bold px-4 py-2 bg-gradient-to-r from-purple to-pink text-white shadow-lg">
                             {milestone.year}
                           </Badge>
-                          <Badge variant="outline" className="text-xs w-fit">
+                          <Badge variant="outline" className="text-xs font-medium border-purple/30 text-purple">
                             {milestone.category}
                           </Badge>
                         </div>
                         
-                        <h4 className="text-xl font-bold text-spaceKadet mb-3 group-hover:text-pink transition-colors duration-300 leading-tight">
+                        {/* Title */}
+                        <h4 className="text-xl font-bold text-foreground mb-3 group-hover:text-purple transition-colors duration-300 leading-tight">
                           {milestone.title}
                         </h4>
-                        <p className="text-base text-muted-foreground leading-relaxed mb-3">
+                        
+                        {/* Main Event Description */}
+                        <p className="text-base text-muted-foreground leading-relaxed mb-4 font-medium">
                           {milestone.event}
                         </p>
+                        
+                        {/* Additional Details */}
                         <p className="text-sm text-muted-foreground leading-relaxed">
                           {milestone.details}
                         </p>
+                        
+                        {/* Decorative Element */}
+                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-purple/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </Card>
                       
+                      {/* Connection Line to Next Item */}
                       {index < milestones.length - 1 && (
-                        <div className="absolute top-8 -right-4 w-8 h-0.5 bg-muted z-0"></div>
+                        <div className="absolute top-16 -right-4 w-8 h-1 bg-gradient-to-r from-purple to-pink z-10 rounded-full"></div>
                       )}
                     </div>
                   ))}
                 </div>
               </div>
               
-              {/* Scroll indicator */}
-              <div className="flex justify-center mt-4">
-                <div className="text-sm text-muted-foreground flex items-center gap-2">
-                  <span>←</span>
-                  <span>Scroll horizontally to explore our journey</span>
-                  <span>→</span>
+              {/* Enhanced Scroll Indicator */}
+              <div className="flex justify-center mt-6">
+                <div className="bg-card rounded-full px-6 py-3 shadow-card border border-border">
+                  <div className="text-sm text-muted-foreground flex items-center gap-3">
+                    <span className="text-purple font-bold">←</span>
+                    <span className="font-medium">Scroll horizontally to explore our 15-year journey</span>
+                    <span className="text-purple font-bold">→</span>
+                  </div>
                 </div>
               </div>
             </div>
             
             {/* Timeline Summary */}
             <div className="mt-16 text-center">
-              <Card className="p-8 shadow-card border-0 bg-gradient-to-r from-pink/5 via-purple/5 to-salmon/5">
+              <Card className="p-8 shadow-elegant border-0 bg-gradient-to-r from-pink/10 via-purple/10 to-salmon/10 relative overflow-hidden">
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-5">
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple via-transparent to-pink"></div>
+                </div>
+                
                 <div className="flex items-center justify-center gap-2 mb-4">
                   <Calendar className="w-6 h-6 text-purple" />
-                  <Badge variant="default" className="bg-pink text-white shadow-lg text-base px-4 py-2">
+                  <Badge variant="default" className="bg-gradient-to-r from-purple to-pink text-white shadow-lg text-lg px-6 py-3 font-bold">
                     2010 - 2025: 15 Years of Excellence
                   </Badge>
                 </div>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                <h4 className="text-2xl font-bold text-foreground mb-4">
+                  From Vision to Impact
+                </h4>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                   From a small training organization to Africa's leading digital talent accelerator, 
-                  our journey reflects unwavering commitment to empowering youth through technology education.
+                  our journey reflects unwavering commitment to empowering youth through technology education. 
+                  Each milestone represents lives transformed, careers launched, and communities strengthened.
                 </p>
               </Card>
             </div>
