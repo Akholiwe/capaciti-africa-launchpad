@@ -1,14 +1,9 @@
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
-import Watermark from "@/components/Watermark";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-br from-primary via-primary to-secondary text-primary-foreground py-16">
-      {/* Watermarks */}
-      <Watermark className="top-12 right-20" size="md" opacity={0.08} />
-      <Watermark className="bottom-16 left-32" size="lg" opacity={0.06} />
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <footer className="bg-primary text-primary-foreground py-16">
+      <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             {/* Brand */}
@@ -22,7 +17,7 @@ const Footer = () => {
               </p>
               <div className="flex gap-4">
                 <a
-                  href="https://www.facebook.com/capacitiza/"
+                  href="https://www.facebook.com/uvuafrica"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
@@ -40,7 +35,7 @@ const Footer = () => {
                   <Twitter size={18} />
                 </a>
                 <a
-                  href="https://www.instagram.com/capacitiza"
+                  href="https://www.instagram.com/uvuafrica"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -97,14 +92,6 @@ const Footer = () => {
                     19 Ameshoff St<br />
                     Braamfontein<br />
                     Johannesburg, 2000
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <MapPin size={18} className="mt-1 text-primary-foreground/80" />
-                  <div className="text-primary-foreground/80">
-                    95 Durham Ave<br />
-                    Salt River, 7925<br />
-                    Cape Town, South Africa
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
