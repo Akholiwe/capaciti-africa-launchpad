@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import Watermark from "@/components/Watermark";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -11,8 +12,17 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative bg-white overflow-hidden">
-      <div className="container mx-auto px-4 py-16 lg:py-24">
+    <section className="relative bg-gradient-to-br from-background via-muted/30 to-accent/10 overflow-hidden">
+      {/* Watermarks */}
+      <Watermark className="top-32 left-16" size="lg" opacity={0.12} />
+      <Watermark className="bottom-24 right-20" size="md" opacity={0.18} />
+      
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-primary/5 to-secondary/10"></div>
+      <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-tl from-secondary/10 to-transparent rounded-full blur-3xl"></div>
+      
+      <div className="container mx-auto px-4 py-16 lg:py-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="max-w-xl">
