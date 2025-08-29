@@ -1,5 +1,4 @@
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
-import Watermark from "@/components/Watermark";
 
 const Footer = () => {
   return (
