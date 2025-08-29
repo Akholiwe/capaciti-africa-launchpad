@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
-import Watermark from "@/components/Watermark";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
